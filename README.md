@@ -40,9 +40,21 @@ rechecks that they still pass. Authority is granted by a human and retained by m
 and a candidate list with reasoning, and then stops without changing anything.
 
 `check_door.py` is the admission test as a script. It reads `door.md`, opens everything listed,
-and fails anything that is neither law nor re-measurable. It also warns when a re-measurable
-document's proof has gone stale, because a printed command with an old cached result beside it
-is worse than no proof at all.
+and fails anything that is neither law nor re-measurable.
+
+It does not take the document's word for which it is. A `doc_type:` line is read as a claim and
+checked against the structure of the file, and a document whose claim and structure disagree
+fails, saying which is which. Self-conferred authority is the thing the door exists to prevent,
+so the check cannot accept it either.
+
+It ages a proof by the date printed beside the command, not by the newest date anywhere in the
+file, because an `updated:` line in the frontmatter will otherwise hide a reading from two years
+ago. There is no global staleness window; a document sets `proof_max_age_days` for itself, and
+one that sets none gets its age reported for you to judge. A fixed threshold would be a guess
+about volatility this script cannot make.
+
+A `door.md` that exists but yields no readable entries fails rather than passing quietly. An
+entry has to be a markdown link. Naming a document in prose is not admitting it.
 
 `essay.md` is the long argument, written to be read by agents as much as by people.
 

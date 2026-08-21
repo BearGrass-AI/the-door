@@ -3,6 +3,7 @@ doc_type: re-measurable
 title: "Environment, and how to prove it"
 updated: 2026-08-21
 verified: 2026-08-21
+proof_max_age_days: 14
 ---
 
 # Environment, and how to prove it
