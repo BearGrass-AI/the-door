@@ -1,8 +1,8 @@
 ---
 doc_type: re-measurable
 title: "Environment, and how to prove it"
-updated: 2026-08-21
-verified: 2026-08-21
+updated: 2026-10-21
+verified: 2026-10-21
 proof_max_age_days: 14
 ---
 
@@ -27,7 +27,17 @@ it describes changes, it is no longer proof, it is a snapshot wearing a lab coat
 
 Confirms if: it names the environment you expect.
 Means the documentation is wrong if: it names anything else.
-Last run 2026-08-21.
+Last run 2026-10-21.
+
+## Packet door still passes admission
+
+```
+python3 check_door.py
+```
+
+Confirms if: every document linked from `door.md` passes as law or re-measurable.
+Means the documentation is wrong if: any admitted document fails or proof is older than its own `proof_max_age_days`.
+Last run 2026-10-21.
 
 ## What credentials the deployed service holds
 
@@ -40,7 +50,7 @@ Names only, never values.
 Confirms if: the names match what you believe is configured.
 Means the documentation is wrong if: the list is empty when you believe it is armed, or
 holds names you did not expect.
-Last run 2026-08-21.
+Last run 2026-10-21.
 
 ## Claims on this page with no read-only test
 
