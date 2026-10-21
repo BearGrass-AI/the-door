@@ -1,7 +1,7 @@
 ---
 doc_type: ledger
 title: "The door"
-updated: 2026-08-21
+updated: 2026-10-21
 ---
 
 # The door
@@ -21,6 +21,10 @@ Run `python3 check_door.py` to see whether everything below still passes.
 
 - [`ledger-template.md`](ledger-template.md) - law. The shape an append-only ledger takes.
 - [`re-measurable-template.md`](re-measurable-template.md) - re-measurable. A document that proves its own claims.
+
+## D-3 2026-10-21 - Packet door re-measured (BEA-206)
+
+Re-measured `re-measurable-template.md` proof for the packet door; `python3 check_door.py` must pass before merge. Closes the 09-11 Validator row together with projects batch `5a90507` (Studio). Studio-only branch tip `526fc8a` on `cursor/bea-206-dor-5746` was not on `origin`; this PR lands equivalent the-door changes from cloud.
 
 ## D-2 2026-08-21 - Deliberately NOT admitted
 
